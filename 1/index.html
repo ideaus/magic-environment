@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ethereal Nexus | wowrakibul</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            body {
+                overflow: hidden;
+                background: #000;
+            }
+
+            canvas {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+            }
+
+            .ui-overlay {
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                color: #fff;
+                font-family: 'Arial', sans-serif;
+                z-index: 1000;
+                text-shadow: 0 0 10px rgba(0, 255, 224, 0.5);
+            }
+
+            .magical-time {
+                font-size: 1.2em;
+                margin-bottom: 10px;
+                color: #00FFE0;
+            }
+
+            .spell-menu {
+                position: fixed;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                background: rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                border-radius: 10px;
+                border: 1px solid rgba(0, 255, 224, 0.3);
+                z-index: 1000;
+            }
+
+            .spell-button {
+                display: block;
+                margin: 10px 0;
+                padding: 10px 20px;
+                background: rgba(123, 47, 255, 0.3);
+                border: 1px solid #7B2FFF;
+                color: #fff;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            }
+
+            .spell-button:hover {
+                background: rgba(123, 47, 255, 0.5);
+                transform: translateX(-5px);
+                box-shadow: 0 0 15px rgba(123, 47, 255, 0.5);
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="ui-overlay">
+            <div class="magical-time">2025-02-15 20:06:22</div>
+            <div class="user-info">Mage: wowrakibul</div>
+        </div>
+
+        <div class="spell-menu">
+            <button class="spell-button" data-spell="portal">Create Portal</button>
+            <button class="spell-button" data-spell="crystals">Summon Crystals</button>
+            <button class="spell-button" data-spell="temporal">Time Distortion</button>
+            <button class="spell-button" data-spell="elements">Elemental Surge</button>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/postprocessing@6.29.3/build/postprocessing.min.js"></script>
+        <script>
+            // Immediate loading visualization
+            document.body.innerHTML += '<div id="loading" style="position:fixed; top:50%; left:50%; transform:translate(-50%,-50%); color:#00FFE0; font-family:Arial; font-size:24px;">Initializing Magical Environment...</div>';
+        </script>
+        <script src="magical-environment.js"></script>
+    </body>
+
+</html>
